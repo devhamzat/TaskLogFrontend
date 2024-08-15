@@ -20,4 +20,12 @@ public class ErrorHandler extends ResponseEntityExceptionHandler {
         error.setDetails(exist.getLocalizedMessage());
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
+    @ExceptionHandler(EmptyRequiredFields.class)
+    public ResponseEntity<ApplicationError> handleEmptyRequiredFields(EmptyRequiredFields exist) {
+        ApplicationError error = new ApplicationError();
+        error.setCode(422);
+        error.setMessage(exist.getMessage());
+        error.setDetails(exist.getLocalizedMessage());
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
 }
