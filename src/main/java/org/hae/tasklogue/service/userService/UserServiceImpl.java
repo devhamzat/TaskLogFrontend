@@ -29,10 +29,11 @@ public class UserServiceImpl implements UserService {
         }
         Response response = getResponse(applicationUserSignUp);
 
+
         return ResponseEntity.ok(response);
     }
 
-    private static Response getResponse(ApplicationUserSignUp applicationUserSignUp) {
+    private Response getResponse(ApplicationUserSignUp applicationUserSignUp) {
         ApplicationUser user = new ApplicationUser();
         user.setUserName(applicationUserSignUp.getUserName());
         user.setEmail(applicationUserSignUp.getEmail());
@@ -40,6 +41,7 @@ public class UserServiceImpl implements UserService {
         user.setBio(applicationUserSignUp.getBio());
         user.setPhotoUrl(applicationUserSignUp.getPhotoUrl());
         user.setSecretPassword(applicationUserSignUp.getPassword());
+        applicationUserRepository.save(user);
         Response response = new Response();
         response.setStatus(HttpStatus.CREATED);
         response.setMessage(user.getUserName() + " successfully created");
