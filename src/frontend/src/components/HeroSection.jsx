@@ -13,7 +13,7 @@ const HeroSection = () => {
             Manage and log your tasks with TaskLogue. Get started today and ease your hefty tasks 
         </p>
         <div className="flex justify-center my-10">
-        <Link className='bg-gradient-to-r from-gray-300 to-gray-100 py-3 px-4  mx-3border rounded-md text-black ' to="/createAccount">
+        <Link className='bg-gradient-to-r from-gray-300 to-gray-100 py-3 px-4  mx-3border rounded-md text-black ' to="/register">
                         Get Started
                     </Link>
         </div>

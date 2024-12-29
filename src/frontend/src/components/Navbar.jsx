@@ -27,7 +27,7 @@ export default function Navbar() {
                 </ul>
                 <div className="hidden lg:flex justify-center space-x-12 items-center">
                     <a href="#" className=' py-2 px-3 border-none'> Sign in</a>
-                    <Link className='bg-gradient-to-r from-gray-300 to-gray-100 py-2 px-3 border rounded-md text-black ' to="/createAccount">
+                    <Link className='bg-gradient-to-r from-gray-300 to-gray-100 py-2 px-3 border rounded-md text-black ' to="/register">
                         Create Account
                     </Link>
                 </div>
@@ -47,7 +47,7 @@ export default function Navbar() {
                         ))}
                     </ul>
                     <div className="flex py-4">
-                    <Link className='bg-gradient-to-r from-gray-300 to-gray-100 py-2 px-3 border rounded-md text-black ' to="/createAccount">
+                    <Link className='bg-gradient-to-r from-gray-300 to-gray-100 py-2 px-3 border rounded-md text-black ' to="/register">
                         Create Account
                     </Link>
                     </div>
